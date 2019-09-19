@@ -4,7 +4,7 @@
 
 OverDrive.Game = (function(gamelib, canvas, context) {
   
-  gamelib.Path = function(regions, world, iterationsToComplete = 1) {
+  gamelib.Path = function(regions, world, iterationsToComplete = 0) {
   
     var self = this;
     

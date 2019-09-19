@@ -411,7 +411,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       // Add 200 points for winner
       self.winner.score += 200;
       
-      self.winnerMessage = self.winner.pid + ' Wins!';
+      self.winnerMessage = self.winner.pid + ' Wins! \nPress "esc" to leave...';
       
       window.requestAnimationFrame(self.phaseOutLoop);
     }

@@ -212,7 +212,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
   stage.MainGame.prototype.player1CrossedFinishLine = function() {
   
     var self = this;
-    if (self.player1.pathLocation.pathComplete && self.player1.score >= 500) {
+    if (self.player1.score >= 500) {
       
       self.winner = self.player1;
       self.levelComplete = true;
@@ -229,7 +229,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     var self = this;
     
-    if (self.player2.pathLocation.pathComplete && self.player2.score >= 500) {
+    if (self.player2.score >= 500) {
       
        self.winner = self.player2;
        self.levelComplete = true;
