@@ -352,8 +352,8 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       self.renderMainScene();
       
       // Draw countdown
-      context.fillStyle = '#FFF';
-      context.font = '50pt Amatic SC';
+      context.fillStyle = '#000000';
+      context.font = '50pt Arial';
     
       var timeToDisplay = 3 - Math.floor(self.countDownSecondsElapsed);
       var textMetrics = context.measureText(timeToDisplay);
