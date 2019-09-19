@@ -77,11 +77,11 @@ OverDrive.Game = (function(gamelib, canvas, context) {
     }
   }
 
-  gamelib.drawHUD = function(player1, player2, showActualTime, elapsedSeconds, maxLaps) {
+  gamelib.drawHUD = function(player1, player2, showActualTime, elapsedSeconds) {
 
     // Draw HUD
-    context.fillStyle = '#FFF';
-    context.font = '30pt Amatic SC';
+    context.fillStyle = '#000000';
+    context.font = '30pt Arial';
     //context.font = '30pt Faster One';
     
     var textMetrics = context.measureText(player1.pid);
@@ -91,23 +91,23 @@ OverDrive.Game = (function(gamelib, canvas, context) {
     context.fillText(player2.pid, canvas.width * 0.8 - textMetrics.width / 2, 50);
     
     
-    context.font = '24px Amatic SC';
+    context.font = '24px Arial';
     
-    var textMetrics = context.measureText('Points: ' + player1.score);
-    context.fillText('Points: ' + player1.score, canvas.width * 0.2 - textMetrics.width / 2, 110);
+    if(player1.score < 500){
+    var textMetrics = context.measureText('Points: ' + player1.score + '/500');
+    context.fillText('Points: ' + player1.score + '/500', canvas.width * 0.2 - textMetrics.width / 2, 75);
+    }else{
+    var textMetrics = context.measureText('Get back to the start!');
+    context.fillText('Get back to the start!', canvas.width * 0.2 - textMetrics.width / 2, 75);
+    }
     
-    var textMetrics = context.measureText('Points: ' + player2.score);
-    context.fillText('Points: ' + player2.score, canvas.width * 0.8 - textMetrics.width / 2, 110);
-    
-    
-    var p1Lap = Math.min(player1.pathLocation.currentIteration + 1, maxLaps);
-    var p2Lap = Math.min(player2.pathLocation.currentIteration + 1, maxLaps);
-    
-    var textMetrics = context.measureText('Lap: ' + p1Lap);
-    context.fillText('Lap: ' + p1Lap, canvas.width * 0.2 - textMetrics.width / 2, 80);
-    
-    var textMetrics = context.measureText('Lap: ' + p2Lap);
-    context.fillText('Lap: ' + p2Lap, canvas.width * 0.8 - textMetrics.width / 2, 80);
+    if(player2.score < 500){
+    var textMetrics = context.measureText('Points: ' + player2.score + '/500');
+    context.fillText('Points: ' + player2.score + '/500', canvas.width * 0.8 - textMetrics.width / 2, 75);
+    }else{
+    var textMetrics = context.measureText('Get back to the start!');
+    context.fillText('Get back to the start!', canvas.width * 0.2 - textMetrics.width / 2, 75);
+    }
     
     // Draw main clock
     

@@ -12,7 +12,6 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
   let tracks = OverDrive.Game.tracks;
   let scenery = OverDrive.Game.scenery;
   
-  
   stage.MainGame.prototype.createTrack = function() {
     
     var self = this;
@@ -134,6 +133,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
                             },
                             postUpdate : function(player, deltaTime, env) {}
                           } );
+
   }
   
   
@@ -207,14 +207,12 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     document.getElementById('actualTime').innerHTML = 'Seconds elapsed = ' + overdrive.gameClock.actualTimeElapsed();
     document.getElementById('timeDelta').innerHTML = 'Time Delta = ' + Math.round(overdrive.gameClock.deltaTime);
     document.getElementById('fps').innerHTML = 'FPS = ' + overdrive.gameClock.frameCounter.getAverageFPS();
-    document.getElementById('spf').innerHTML = 'SPF = ' + overdrive.gameClock.frameCounter.getAverageSPF();
   }
   
   stage.MainGame.prototype.player1CrossedFinishLine = function() {
   
     var self = this;
-    
-    if (self.player1.pathLocation.pathComplete && self.player1.points >= 500) {
+    if (self.player1.pathLocation.pathComplete && self.player1.score >= 500) {
       
       self.winner = self.player1;
       self.levelComplete = true;
@@ -231,17 +229,17 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     var self = this;
     
-    if (self.player2.pathLocation.pathComplete && self.player2.points >= 500) {
+    if (self.player2.pathLocation.pathComplete && self.player2.score >= 500) {
       
-      self.winner = self.player2;
-      self.levelComplete = true;
+       self.winner = self.player2;
+       self.levelComplete = true;
       
-      return true;
-    }
-    else {
+       return true;
+     }
+     else {
       
-      return false;
-    }
+       return false;
+     }
   }
   
   stage.MainGame.prototype.repeatGameLoop = function() {

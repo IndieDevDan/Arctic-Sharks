@@ -92,7 +92,7 @@ OverDrive.Game = (function(gamelib, canvas, context) {
         context.closePath();
             
         context.lineWidth = 1;
-        context.strokeStyle = '#000000';
+        context.strokeStyle = '#FFF';
         context.stroke();
       }
     }
@@ -411,7 +411,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       // Add 200 points for winner
       self.winner.score += 200;
       
-      self.winnerMessage = self.winner.pid + ' Wins!!!!!';
+      self.winnerMessage = self.winner.pid + ' Wins!';
       
       window.requestAnimationFrame(self.phaseOutLoop);
     }
