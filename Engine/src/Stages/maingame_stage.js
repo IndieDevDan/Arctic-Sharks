@@ -92,7 +92,7 @@ OverDrive.Game = (function(gamelib, canvas, context) {
         context.closePath();
             
         context.lineWidth = 1;
-        context.strokeStyle = '#FFF';
+        context.strokeStyle = '#000000';
         context.stroke();
       }
     }
