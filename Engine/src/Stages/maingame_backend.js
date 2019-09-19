@@ -214,7 +214,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
   
     var self = this;
     
-    if (self.player1.pathLocation.pathComplete) {
+    if (self.player1.pathLocation.pathComplete && self.player1.points >= 500) {
       
       self.winner = self.player1;
       self.levelComplete = true;
@@ -231,7 +231,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     var self = this;
     
-    if (self.player2.pathLocation.pathComplete) {
+    if (self.player2.pathLocation.pathComplete && self.player2.points >= 500) {
       
       self.winner = self.player2;
       self.levelComplete = true;
