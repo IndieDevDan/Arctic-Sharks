@@ -430,7 +430,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       
       // Draw winner message
       context.fillStyle = '#000000';
-      context.font = '50pt Times New Roman';
+      context.font = '50pt Courier New';
       var textMetrics = context.measureText(self.winnerMessage);
       context.fillText(self.winnerMessage, canvas.width * 0.5 - textMetrics.width / 2, 300);
       

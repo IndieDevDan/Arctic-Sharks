@@ -128,10 +128,10 @@ OverDrive.Game = (function(gamelib, canvas, context) {
           mode : gamelib.InputMode.Keyboard,
           keys : {
             
-            forward : 'UP',
-            reverse : 'DOWN',
-            left : 'LEFT',
-            right : 'RIGHT'
+            forward : 'I',
+            reverse : 'K',
+            left : 'J',
+            right : 'L'
           }
         }
       ],

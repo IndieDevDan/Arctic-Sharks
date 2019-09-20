@@ -6,7 +6,7 @@ OverDrive.Stages.Leaderboard = (function(stage, canvas, context) {
   
   let overdrive = OverDrive.Game.system;
   
-  var leaderboardFont = '30pt Amatic SC';
+  var leaderboardFont = '30pt Courier New';
   
   
   //

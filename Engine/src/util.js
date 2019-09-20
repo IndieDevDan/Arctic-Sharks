@@ -81,7 +81,7 @@ OverDrive.Game = (function(gamelib, canvas, context) {
 
     // Draw HUD
     context.fillStyle = '#000000';
-    context.font = '30pt Arial';
+    context.font = '30pt Courier New';
     //context.font = '30pt Faster One';
     
     var textMetrics = context.measureText(player1.pid);
@@ -91,7 +91,7 @@ OverDrive.Game = (function(gamelib, canvas, context) {
     context.fillText(player2.pid, canvas.width * 0.8 - textMetrics.width / 2, 50);
     
     
-    context.font = '24px Arial';
+    context.font = '24px Courier New';
     
     if(player1.score < 500){
     var textMetrics = context.measureText('Points: ' + player1.score + '/500');
@@ -127,8 +127,8 @@ OverDrive.Game = (function(gamelib, canvas, context) {
       
       clockString = '00 : 00';
     }
-    
-    context.font = '30pt Amatic SC';
+    context.fillStyle = '#00FF00';
+    context.font = '30pt Courier New';
     
     var textMetrics = context.measureText(clockString);
     context.fillText(clockString, canvas.width * 0.5 - textMetrics.width / 2, 50);
