@@ -6,55 +6,16 @@ OverDrive.Stages.Credits = (function(stage, canvas, context) {
   
   let overdrive = OverDrive.Game.system;
   
-  var creditFont = '30pt Amatic SC';
+  var creditFont = '30pt Courier New';
   
   var credits = [
   
-    'The Wonky Donkey Crew',
+    'The Arctic Shark Team',
     '---------------------',
-    'Jade',
-    'Hayley',
-    'Nick',
-    'Owen',
-    'Paul',
-    'Joshua',
-    'Beth',
-    'Will',
-    'Megan',
-    'Hollie',
-    'Bethan',
-    'Anna',
-    
-    ' ',
-    
-    'Erin',
-    'Lewis',
-    'Tegan',
-    'Krystal',
-    'Kye',
-    'Maisie',
-    'Alisha',
-    'Leon',
-    'Ben',
-    'Finley',
-    'Charlie',
-    'Joshua',
-    'Connor',
-    'Jenna',
-    'Mason',
-    'Tia',
-    'Joey',
-    'Lowrie',
-    'Kory',
-    'Bethan',
-    'Nicky',
-    'Jack',
-    'Chole',
-    'Madison',
-    'Amba',
-    'Delyth',
-    'Laila',
-    'Livvi'
+    'Dan',
+    'Jamie',
+    'Hezhy',
+    'KingThunder',
 	];
   
   
