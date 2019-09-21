@@ -605,6 +605,10 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
           var F = player.forwardDirection();
           
           player.applyForce(player.mBody.position, { x : F.x * player.forwardForce, y : F.y * player.forwardForce });
+        }else{
+          var F = player.forwardDirection();
+          
+          player.applyForce(player.mBody.position, { x : F.x * player.forwardForce/2, y : F.y * player.forwardForce/2 });
         }
         
         if (this.keyPressed(overdrive.settings.players[0].keys.reverse)) {
@@ -658,6 +662,10 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
           var F = player.forwardDirection();
           
           player.applyForce(player.mBody.position, { x : F.x * player.forwardForce, y : F.y * player.forwardForce });
+        }else{
+          var F = player.forwardDirection();
+          
+          player.applyForce(player.mBody.position, { x : F.x * player.forwardForce/2, y : F.y * player.forwardForce/2 });
         }
         
         if (this.keyPressed(overdrive.settings.players[1].keys.reverse)) {

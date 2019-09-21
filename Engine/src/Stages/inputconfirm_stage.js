@@ -370,7 +370,7 @@ OverDrive.Stages.InputConfirm = (function(stage, canvas, context) {
       context.font = '38pt Amatic SC';  
       
       var numLines = messageText.length;
-      var baseY = 300 - (numLines / 2 * 30);
+      var baseY = 200 - (numLines / 2 * 30);
       
       for (var i=0; i<numLines; ++i, baseY+=44) {
       

@@ -117,7 +117,6 @@ OverDrive.Game = (function(gamelib, canvas, context) {
           keys : {
             
             forward : 'W',
-            reverse : 'S',
             left : 'A',
             right : 'D'
           }
@@ -129,7 +128,6 @@ OverDrive.Game = (function(gamelib, canvas, context) {
           keys : {
             
             forward : 'I',
-            reverse : 'K',
             left : 'J',
             right : 'L'
           }

@@ -184,7 +184,7 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
       
       overdrive.settings.players[0].keys.forward = $('#p1AccelKeyField').val().toUpperCase();
       
-      overdrive.settings.players[0].keys.reverse = $('#p1BrakeKeyField').val().toUpperCase();
+      // overdrive.settings.players[0].keys.reverse = $('#p1BrakeKeyField').val().toUpperCase();
       
       overdrive.settings.players[0].keys.left = $('#p1LeftKeyField').val().toUpperCase();
       
@@ -206,7 +206,7 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
       
       overdrive.settings.players[1].keys.forward = $('#p2AccelKeyField').val().toUpperCase();
       
-      overdrive.settings.players[1].keys.reverse = $('#p2BrakeKeyField').val().toUpperCase();
+      // overdrive.settings.players[1].keys.reverse = $('#p2BrakeKeyField').val().toUpperCase();
       
       overdrive.settings.players[1].keys.left = $('#p2LeftKeyField').val().toUpperCase();
       
@@ -336,7 +336,7 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
         forwardKeyDiv.setAttribute('class', 'col-xs-6 settingsField settingsLabel accelKeyLabel');
         
           var fkNameLabel = document.createElement('label');
-          fkNameLabel.appendChild(document.createTextNode('Forward / Accelerate'));
+          fkNameLabel.appendChild(document.createTextNode('Accelerate'));
           
           forwardKeyDiv.appendChild(fkNameLabel);
         
@@ -352,25 +352,25 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
           fkFieldDiv.appendChild(fkInput);
         
         
-        // Reverse key field
-        var reverseKeyDiv = document.createElement('div');
-        reverseKeyDiv.setAttribute('class', 'col-xs-6 settingsField settingsLabel brakeKeyLabel');
+        // // Reverse key field
+        // var reverseKeyDiv = document.createElement('div');
+        // reverseKeyDiv.setAttribute('class', 'col-xs-6 settingsField settingsLabel brakeKeyLabel');
         
-          var bkNameLabel = document.createElement('label');
-          bkNameLabel.appendChild(document.createTextNode('Reverse / Brake'));
+        //   var bkNameLabel = document.createElement('label');
+        //   bkNameLabel.appendChild(document.createTextNode('Reverse / Brake'));
           
-          reverseKeyDiv.appendChild(bkNameLabel);
+        //   reverseKeyDiv.appendChild(bkNameLabel);
         
-        var bkFieldDiv = document.createElement('div');
-        bkFieldDiv.setAttribute('class', 'col-xs-3 settingsField brakeKeyField');
+        // var bkFieldDiv = document.createElement('div');
+        // bkFieldDiv.setAttribute('class', 'col-xs-3 settingsField brakeKeyField');
         
-          var bkInput = document.createElement('input');
-          bkInput.setAttribute('type', 'text');
-          bkInput.setAttribute('class', 'form-control');
-          bkInput.setAttribute('id', 'p1BrakeKeyField');
-          bkInput.setAttribute('value', overdrive.settings.players[0].keys.reverse);
+        //   var bkInput = document.createElement('input');
+        //   bkInput.setAttribute('type', 'text');
+        //   bkInput.setAttribute('class', 'form-control');
+        //   bkInput.setAttribute('id', 'p1BrakeKeyField');
+        //   bkInput.setAttribute('value', overdrive.settings.players[0].keys.reverse);
         
-          bkFieldDiv.appendChild(bkInput);
+        //   bkFieldDiv.appendChild(bkInput);
           
         
         // Steer left key field
@@ -417,8 +417,8 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
         
         player1Div.appendChild(forwardKeyDiv);
         player1Div.appendChild(fkFieldDiv);
-        player1Div.appendChild(reverseKeyDiv);
-        player1Div.appendChild(bkFieldDiv);
+        // player1Div.appendChild(reverseKeyDiv);
+        // player1Div.appendChild(bkFieldDiv);
         player1Div.appendChild(leftKeyDiv);
         player1Div.appendChild(lFieldDiv);
         player1Div.appendChild(rightKeyDiv);
@@ -522,7 +522,7 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
         forwardKeyDiv.setAttribute('class', 'col-xs-6 settingsField settingsLabel accelKeyLabel');
         
           var fkNameLabel = document.createElement('label');
-          fkNameLabel.appendChild(document.createTextNode('Forward / Accelerate'));
+          fkNameLabel.appendChild(document.createTextNode('Accelerate'));
           
           forwardKeyDiv.appendChild(fkNameLabel);
         
@@ -539,24 +539,24 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
         
         
         // Reverse key field
-        var reverseKeyDiv = document.createElement('div');
-        reverseKeyDiv.setAttribute('class', 'col-xs-6 settingsField settingsLabel brakeKeyLabel');
+        // var reverseKeyDiv = document.createElement('div');
+        // reverseKeyDiv.setAttribute('class', 'col-xs-6 settingsField settingsLabel brakeKeyLabel');
         
-          var bkNameLabel = document.createElement('label');
-          bkNameLabel.appendChild(document.createTextNode('Reverse / Brake'));
+        //   var bkNameLabel = document.createElement('label');
+        //   bkNameLabel.appendChild(document.createTextNode('Reverse / Brake'));
           
-          reverseKeyDiv.appendChild(bkNameLabel);
+        //   reverseKeyDiv.appendChild(bkNameLabel);
         
-        var bkFieldDiv = document.createElement('div');
-        bkFieldDiv.setAttribute('class', 'col-xs-3 settingsField brakeKeyField');
+        // var bkFieldDiv = document.createElement('div');
+        // bkFieldDiv.setAttribute('class', 'col-xs-3 settingsField brakeKeyField');
         
-          var bkInput = document.createElement('input');
-          bkInput.setAttribute('type', 'text');
-          bkInput.setAttribute('class', 'form-control');
-          bkInput.setAttribute('id', 'p2BrakeKeyField');
-          bkInput.setAttribute('value', overdrive.settings.players[1].keys.reverse);
+        //   var bkInput = document.createElement('input');
+        //   bkInput.setAttribute('type', 'text');
+        //   bkInput.setAttribute('class', 'form-control');
+        //   bkInput.setAttribute('id', 'p2BrakeKeyField');
+        //   bkInput.setAttribute('value', overdrive.settings.players[1].keys.reverse);
         
-          bkFieldDiv.appendChild(bkInput);
+        //   bkFieldDiv.appendChild(bkInput);
           
         
         // Steer left key field
@@ -603,8 +603,8 @@ OverDrive.Stages.Config = (function(stage, canvas, context) {
         
         player2Div.appendChild(forwardKeyDiv);
         player2Div.appendChild(fkFieldDiv);
-        player2Div.appendChild(reverseKeyDiv);
-        player2Div.appendChild(bkFieldDiv);
+        // player2Div.appendChild(reverseKeyDiv);
+        // player2Div.appendChild(bkFieldDiv);
         player2Div.appendChild(leftKeyDiv);
         player2Div.appendChild(lFieldDiv);
         player2Div.appendChild(rightKeyDiv);

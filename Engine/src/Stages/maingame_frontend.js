@@ -9,6 +9,9 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
   
   stage.MainGame.prototype.setup = function() {
     
+    document.getElementById('GameDiv').removeChild(document.getElementById('startButton'));
+    document.getElementById('GameDiv').removeChild(document.getElementById('settingsButton'));
+    document.getElementById('GameDiv').removeChild(document.getElementById('creditsButton'));
     this.createTrack();
     this.createScenery();
     this.setupBackground();

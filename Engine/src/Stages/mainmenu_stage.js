@@ -7,7 +7,7 @@ OverDrive.Stages.MainMenu = (function(stage, canvas, context) {
   let overdrive = OverDrive.Game.system;
   
   var menuBackground = 'Assets/Images/Menu.png';
-  var optionFont = '30pt Times New Roman';
+  var optionFont = '30pt Courier New';
   
   
   //
@@ -87,14 +87,29 @@ OverDrive.Stages.MainMenu = (function(stage, canvas, context) {
       
       self.selectedOption = -1;
       
-      if (self.menuOptions === null) {
+// Create menu buttons
+      var startButton = document.createElement('button');startButton.setAttribute('type', 'button');
+      startButton.setAttribute('class', 'btn btn-default settingsField');startButton.setAttribute('id', 'startButton');
+      startButton.appendChild(document.createTextNode('Start Game'));document.getElementById('GameDiv').appendChild(startButton);
+      $('#startButton').click(self.StartGame);
+
+      var settingsButton = document.createElement('button');settingsButton.setAttribute('type', 'button');
+      settingsButton.setAttribute('class', 'btn btn-default settingsField');settingsButton.setAttribute('id', 'settingsButton');
+      settingsButton.appendChild(document.createTextNode('Settings'));document.getElementById('GameDiv').appendChild(settingsButton);
+      $('#settingsButton').click(self.Settings);
+
+      var creditsButton = document.createElement('button');creditsButton.setAttribute('type', 'button');
+      creditsButton.setAttribute('class', 'btn btn-default settingsField');creditsButton.setAttribute('id', 'creditsButton');
+      creditsButton.appendChild(document.createTextNode('Credits'));document.getElementById('GameDiv').appendChild(creditsButton);
+      $('#creditsButton').click(self.Credits);
       
+      if (self.menuOptions === null) {
+
         self.menuOptions = [
       
-          { optionNumber : overdrive.Keys.K_1, optionText : '1. Start Game', target : 'mainGame' },
-          { optionNumber : overdrive.Keys.K_2, optionText : '2. Settings', target : 'config' },
-          { optionNumber : overdrive.Keys.K_3, optionText : '3. High Scores', target : 'highScores' },
-          { optionNumber : overdrive.Keys.K_4, optionText : '4. Credits', target : 'credits' }
+          { optionNumber : overdrive.Keys.K_1, optionText : '', target : 'mainGame' },
+          { optionNumber : overdrive.Keys.K_2, optionText : '', target : 'config' },
+          { optionNumber : overdrive.Keys.K_4, optionText : '', target : 'credits' }
         ];
       }
       
@@ -122,6 +137,16 @@ OverDrive.Stages.MainMenu = (function(stage, canvas, context) {
       window.requestAnimationFrame(self.mainLoop);
     }	
     
+this.StartGame = function(){
+  self.selectedOption = 0;
+}
+this.Settings = function(){
+  self.selectedOption = 1;
+}
+this.Credits = function(){
+  self.selectedOption = 2;
+}
+
     this.mainLoop = function() {
             
       // Update system clock

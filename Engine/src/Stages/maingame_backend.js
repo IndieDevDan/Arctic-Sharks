@@ -201,12 +201,6 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     // Draw Status
     OverDrive.Game.drawHUD(self.player1, self.player2, true, self.lapTime, self.path.maxIterations);
-    
-    
-    // Update status elements
-    document.getElementById('actualTime').innerHTML = 'Seconds elapsed = ' + overdrive.gameClock.actualTimeElapsed();
-    document.getElementById('timeDelta').innerHTML = 'Time Delta = ' + Math.round(overdrive.gameClock.deltaTime);
-    document.getElementById('fps').innerHTML = 'FPS = ' + overdrive.gameClock.frameCounter.getAverageFPS();
   }
   
   stage.MainGame.prototype.player1CrossedFinishLine = function() {
