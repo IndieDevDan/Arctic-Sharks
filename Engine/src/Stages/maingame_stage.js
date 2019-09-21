@@ -325,7 +325,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
         collisionGroup : 0,
         handler : function(collector) {
         
-          collector.addPoints(50);
+          collector.addPoints(100);
         }
       } );
       
@@ -394,7 +394,12 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
         overdrive.gameClock.convertTimeIntervalToSeconds(overdrive.gameClock.deltaTime),
         self.regions);
       
-      self.pickup_timer = pickupStatus.timer;
+      if(pickupStatus.pickupTypes == pickupTypes["points_pickup"]){
+        self.pickup_timer = pickupStatus.timer;
+      }else{
+        self.pickup_timer = pickupStatus.timer*2;
+      }
+      
       
       if (pickupStatus.newPickup) {
       
