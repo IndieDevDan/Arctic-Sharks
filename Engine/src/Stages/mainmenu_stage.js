@@ -141,10 +141,18 @@ this.StartGame = function(){
   self.selectedOption = 0;
 }
 this.Settings = function(){
+  self.DestroyMenu();
   self.selectedOption = 1;
 }
 this.Credits = function(){
+  self.DestroyMenu();
   self.selectedOption = 2;
+}
+
+this.DestroyMenu = function(){
+  document.getElementById('GameDiv').removeChild(document.getElementById('startButton'));
+    document.getElementById('GameDiv').removeChild(document.getElementById('settingsButton'));
+    document.getElementById('GameDiv').removeChild(document.getElementById('creditsButton'));
 }
 
     this.mainLoop = function() {

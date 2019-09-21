@@ -394,12 +394,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
         overdrive.gameClock.convertTimeIntervalToSeconds(overdrive.gameClock.deltaTime),
         self.regions);
       
-      if(pickupStatus.pickupTypes == pickupTypes["points_pickup"]){
-        self.pickup_timer = pickupStatus.timer;
-      }else{
-        self.pickup_timer = pickupStatus.timer*2;
-      }
-      
+        self.pickup_timer = pickupStatus.timer;      
       
       if (pickupStatus.newPickup) {
       
@@ -413,11 +408,17 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     this.initPhaseOut = function() {
       
-      // Add 200 points for winner
-      self.winner.score += 200;
-      
       self.winnerMessage = self.winner.pid + ' Wins!';
-      
+
+      //Create win buttons
+      var goToMenu = document.createElement('button');
+      goToMenu.setAttribute('type', 'button');
+      goToMenu.setAttribute('class', 'btn btn-default settingsField');
+      goToMenu.setAttribute('id', 'goToMenu');
+      goToMenu.appendChild(document.createTextNode('Main Menu'));
+      document.getElementById('GameDiv').appendChild(goToMenu);
+      $('#goToMenu').click(self.ReturnToMenu);
+
       window.requestAnimationFrame(self.phaseOutLoop);
     }
     
@@ -438,17 +439,20 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       context.font = '50pt Courier New';
       var textMetrics = context.measureText(self.winnerMessage);
       context.fillText(self.winnerMessage, canvas.width * 0.5 - textMetrics.width / 2, 300);
-      
+
       if (self.keyPressed('ESC')) {
-        
-        window.requestAnimationFrame(self.leaveStage);
+        self.ReturnToMenu();
       }
       else {
-      
         window.requestAnimationFrame(self.phaseOutLoop);
       }
     }
     
+    this.ReturnToMenu = function(event){
+      document.getElementById("GameDiv").removeChild(document.getElementById('goToMenu'));
+      window.requestAnimationFrame(self.leaveStage);
+    }
+
     this.leaveStage = function() {
     
       // Add to leaderboard

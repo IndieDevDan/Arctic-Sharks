@@ -232,6 +232,17 @@ body {
   font-style: bold;
 }
 
+#goToMenu{
+  left : 300px;
+  top : 375px;
+  width : 225px;
+  z-index : 0;
+  background-color : rgba(0, 0, 0, 0);
+  font-size: 32px;
+  font-family: 'Courier New Bold';
+  font-style: bold;
+}
+
 /* -------------------------- */
 
 #actualTime, #timeDelta, #fps, #spf {
